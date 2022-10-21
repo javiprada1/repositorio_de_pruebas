@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onkeydown="teclaPulsada(event)" /> 
+    //Lo primero que hacemos es incluir la variable event en el evento OnKeyDown. Esto sirve para que en el momento en que el evento se ejecute, este pueda tener acceso a la información respectiva a la tecla. 
+    ¡¡EVENT LO VEREMOS EN LAS SIGUIENTES DIAPOSITIVAS!!
+            <script>
+                function teclaPulsada(event) {
+                    const key = event.key; // "A", "1", "Enter", "ArrowRight"...La propiedad de solo lectura KeyboardEvent.key retorna el valor de la tecla presionada por el usuario. EN LAS SIGUIENTES DIAPOSITIVAS!
+                    console.log("La tecla pulsada es: " + key);
+                    //alert("La tecla pulsada es: " + key);
+                }
+            </script>
+    
+</body>
+</html>

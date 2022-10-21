@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Enter your name: <input type="text" onfocus="myFunction(this), myFunction3()" onfocusout="myFunction2(this)">
+
+<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+<script>
+function myFunction(x) {
+  x.style.background = "yellow";
+}
+
+function myFunction2(x) {
+  x.style.background = "white";
+}
+
+function myFunction3(){
+    console.log("hola!!!")
+}
+</script>
+
+</body>
+</html>

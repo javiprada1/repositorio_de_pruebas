@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Apertura y Cierre de Ventanas</title>
+    <script type="text/javascript">
+        function inicializar() {
+            document.getElementById("crear-ventana").onclick = crearNueva;
+            document.getElementById("cerrar-ventana").onclick = cerrarNueva;
+        }
+        var nuevaVentana;
+        function crearNueva() {
+            nuevaVentana = 
+window.open("http://www.google.es", "", "height=400,width=800");
+
+          //  nuevaVentana.blur();
+        }
+        function cerrarNueva() {
+            if (nuevaVentana) {
+                nuevaVentana.close();
+                nuevaVentana = null;
+            }
+        }
+        let sign;
+        if (window.confirm("Do you really want to leave?")) {
+  window.open("exit.html", "Thanks for Visiting!");
+}else{
+    sign = prompt("¿Di algo no?");
+}
+console.log("Has dicho:"+sign);
+
+console.log(document.forms);
+
+
+    </script>
+</head>
+
+<body onLoad="inicializar()">
+    <h1>Abrimos y cerramos ventanas</h1>
+    <form>
+        <p> <input type="button" id="crear-ventana" value="Crear Nueva Ventana">
+            <input type="button" id="cerrar-ventana" value="Cerrar Nueva Ventana"> </p>
+    </form>
+</body>
+
+</html>
