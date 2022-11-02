@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>div {width: 200px;height: 100px;border: 1px solid black;}</style>
+</head>
+<body>
+    <div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+    <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+    <p id="demo"></p>
+
+    <button id="myBtn">¡Sumale 1 al contandor!</button>
+
+    <script>
+        function myFunction(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            var coor = "Coordinates: (" + x + "," + y + ")";
+            document.getElementById("demo").innerHTML = coor;
+        }
+        function clearCoor() {
+            document.getElementById("demo").innerHTML = "";
+        }
+/*
+        var horaformatoGMT = new Date().toUTCtring();
+        var ruta = "/inicio";
+        var nombreDominio = "miweb.com";
+
+        document.cookie = "nombreCookie=datosCookie[; expires=horaformatoGMT][; path=ruta][; domain=nombreDominio][; secure]";
+*/
+
+
+document.cookie = "usuario=Guillermo";
+
+console.log(document.cookie);
+
+
+var hoy = new Date();
+let tomorrow =  new Date();
+tomorrow.setDate(hoy.getDate() + 1);
+
+            document.cookie = "expires=" + tomorrow.toUTCString() + ";"   
+            
+            
+document.cookie = `contador`;
+
+console.log(getCookie('contador'))
+
+const element = document.getElementById("myBtn");
+element.addEventListener("click", sumar);
+
+function sumar(){
+    let cont = new Number(getCookie("contador"));
+    let newvalue = cont+1;
+    document.cookie = `contador=${newvalue}`;
+    console.log(document.cookie);
+}
+
+function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+
+    </script>
+</body>
+</html>

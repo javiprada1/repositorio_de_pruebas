@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Recorriendo usando getElementById</title>
+        <script script type="text/javascript" src="js/demo1.js"></script>
+    </head>
+    <body>
+        <a href="javascript:toggleFormVisibility();" id="sub">Suscríbete a nuestra revista!</a> <!-- LINKEAR UNA FUNCIÓN EN JS: -->
+        <form name="subscribe" id="subscribe_frm" action="#" style="display: none"> <!-- El formulario solo debe mostrarse al
+            hacer click en el enlace. -->
+           <div>
+                <p>Introduzca sus datos:</p>
+                <p><label for="name">Nombre: </label><input type="text" name="name" id="txt_name"></p>
+                <p><label for="email">Email: </label><input type="text" name="email" id="txt_email"></p>
+                <p><label for="mail_format">Formato deseado: 
+    <select name="mail_format" id="slt_mail_format">
+                            <option value="TEXT">Texto plano</option>
+                            <option value="HTML">HTML</option>
+                     </select></p>
+                <p><input type="button" name="submit" value="submit" onclick="processFormData();"></p>
+            </div>
+            <a href="javascript:toggleFormVisibility();" id="nosub" style="display: none">No, gracias, estoy harto de publicidad.</a>
+        </form>
+    </body>
+</html>

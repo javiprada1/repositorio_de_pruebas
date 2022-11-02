@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>div {width: 200px;height: 100px;border: 1px solid black;}</style>
+</head>
+<body>
+    <a id="mienlace" href="pagina.html">Pulsa aqui</a>
+    <script type="text/javascript">
+        document.getElementById("mienlace").addEventListener('click', alertar, false);
+        document.getElementById("mienlace").addEventListener('click', avisar, false);
+        document.getElementById("mienlace").addEventListener('click', chequear, false);
+
+        function alertar() {
+            alert("Te conectaremos con la página: " + this.href);
+        }
+        function avisar() {
+            alert("Te aviso");
+        }
+        function chequear() {
+            alert("Te chequeo");
+        }
+    </script>
+</body>
+
+</html>

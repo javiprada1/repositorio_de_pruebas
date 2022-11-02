@@ -52,3 +52,7 @@ console.log(course.teacher);
 let text = course.intro();
 
 console.log(text);
+
+function myFunctionunload() {
+    alert("Thank you for visiting W3Schools!");
+  }

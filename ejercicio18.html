@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>div {width: 200px;height: 100px;border: 1px solid black;}</style>
+</head>
+<body>
+    <div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+    <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+    <p id="demo"></p>
+    <script>
+// Creamos un objeto
+var object = { 'uno' : '1', 'dos' : '2', 'nombre': 'daniel' };
+// Lo guardamos en localStorage, pasándolo a cadena con JSON
+localStorage.setItem('key', JSON.stringify(object));
+// Creamos una nueva variable object2 con el valor obtenido de localStorage usando JSON recuperar el objeto inicial
+var object2 = JSON.parse(localStorage.getItem('key'));
+console.log(object2.uno); // La alerta mostrará 1 por pantalla
+console.log(object2.dos); // La alerta mostrará 2 por pantalla
+console.log(object2.nombre); // La alerta mostrará ‘daniel’ por pantalla
+    </script>
+</body>
+</html>

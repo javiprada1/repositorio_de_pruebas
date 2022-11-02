@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="titulo">Esto es un titulo</h2>
+    <p id="parrafo" class="parrafo">Esto es un parrafo</p>
+    <button onclick="miFuncion()">Pulsa aqui</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        function miFuncion() {
+            var oElementoH2 = document.querySelector(".titulo"); 
+            var oElementoP = document.querySelector("#parrafo"); 
+            var oElementoP1 = document.querySelector("#p1"); 
+            var oElementoP2 = document.querySelector("#p2"); 
+            oElementoP1.innerHTML="Atributo   CLASS   del   elemento   H2:   " + 
+            oElementoH2.getAttribute("class"); 
+            oElementoP2.innerHTML="Atributo ID del elemento P: " + oElementoP.getAttribute("id");
+        }
+    </script>
+</body>
+
+</html>
