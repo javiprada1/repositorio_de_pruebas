@@ -24,3 +24,10 @@
       $("#style5").click(function() {
         $('link[media="screen"]').attr('href','css/style5.css');
       });
+
+
+      $( "#myselect" ).change(function() {
+        var sleTex = $( this ).val();
+        alert("Selected Text: " + sleTex);
+      });
+
